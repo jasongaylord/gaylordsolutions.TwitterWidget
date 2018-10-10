@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace cloudscribe.TwitterWidget.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class TwitterWidgetController : Controller
     {
         protected IHostingEnvironment HostingEnvironment { get; private set; }
@@ -31,6 +32,11 @@ namespace cloudscribe.TwitterWidget.Controllers
                 TwitterOptions = options.Value;
             else
                 TwitterOptions = new TwitterOptions();
+        }
+
+        public ActionResult Index()
+        {
+            return Content("Success!");
         }
 
         [HttpPost]
