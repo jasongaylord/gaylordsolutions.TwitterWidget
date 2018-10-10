@@ -8,7 +8,7 @@ namespace cloudscribe.TwitterWidget.Models
     public class TwitterOptions
     {
         [Required]
-        public string Username { get; set; }
+        public string Username { get; set; } = "cloudscribeweb";
         public int Count { get; set; } = 5;
         public int CacheMinutes { get; set; } = 5;
         public bool ShowAvatars { get; set; } = false;
