@@ -8,7 +8,7 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddCloudScribeLatestTweets(this IServiceCollection services, IConfiguration configuration = null)
+        public static IServiceCollection AddTwitterWidget(this IServiceCollection services, IConfiguration configuration = null)
         {
             if (configuration != null)
                 services.Configure<TwitterOptions>(configuration);
