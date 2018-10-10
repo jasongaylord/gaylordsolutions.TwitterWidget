@@ -1,5 +1,6 @@
 ﻿using cloudscribe.TwitterWidget;
 using cloudscribe.TwitterWidget.Models;
+using cloudscribe.TwitterWidget.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -14,6 +15,7 @@ namespace Microsoft.Extensions.DependencyInjection
             else
                 services.TryAddSingleton<TwitterOptions, TwitterOptions>();
 
+            services.TryAddSingleton<TwitterCache>();
             services.TryAddScoped<ITwitterService, TwitterService>();
 
             return services;
