@@ -2,7 +2,7 @@
 
 namespace cloudscribe.LatestTweets
 {
-    public class Class1
+    public interface ILatestTweetsService
     {
     }
 }
