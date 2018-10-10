@@ -1,17 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>Obtains a recent list of tweets from Twitter.</Description>
+    <Description>A Twitter widget to be used within CloudScribe</Description>
     <VersionPrefix>0.2.0</VersionPrefix>
     <Authors>Jason Gaylord</Authors>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <PackageTags>cloudscribe;twitter;tweet;asp.net core</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/joeaudette/cloudscribe/master/cloudscribe-icon-32.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/jasongaylord/cloudscribe.LatestTweets</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jasongaylord/cloudscribe.TwitterWidget</PackageProjectUrl>
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/jasongaylord/cloudscribe.LatestTweets.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/jasongaylord/cloudscribe.TwitterWidget.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ITweetRequestProcessor.cs" />
+    <Compile Remove="TweetRequest.cs" />
+    <Compile Remove="TweetRequestParser.cs" />
+    <Compile Remove="TweetRequestProcessor.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.0" />

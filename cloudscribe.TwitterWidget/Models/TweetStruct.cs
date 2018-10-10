@@ -1,4 +1,4 @@
-﻿namespace LatestTwitter.Models
+﻿namespace cloudscribe.TwitterWidget.Models
 {
     public class TweetStruct
     {

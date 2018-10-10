@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace cloudscribe.LatestTweets.Models
+namespace cloudscribe.TwitterWidget.Models
 {
     public class TwitterOptions
     {
