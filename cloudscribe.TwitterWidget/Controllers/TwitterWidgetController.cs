@@ -38,15 +38,13 @@ namespace cloudscribe.TwitterWidget.Controllers
         public virtual async Task<IActionResult> RetrieveTweets()
         {
             var key = CacheKey + TwitterOptions.Username + "_RetrieveTweets";
-            var result = new List<TweetStruct>();
+            var results = new List<TweetStruct>();
 
-            if (!_cache.TryGetValue(key, out result))
+            if (!_cache.TryGetValue(key, out results))
             {
-                result = await TwitterService.RetrieveTweets(TwitterOptions, key);
-                _cache.Set(key, result, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(TwitterOptions.CacheMinutes));
+                results = await TwitterService.RetrieveTweets(TwitterOptions, key);
+                _cache.Set(key, results, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(TwitterOptions.CacheMinutes)));
             }
-
-            List<TweetStruct> results = _cache.Get<List<TweetStruct>>(key) ?? await TwitterService.RetrieveTweets(TwitterOptions, key);
 
             return new JsonResult(results);
         }
