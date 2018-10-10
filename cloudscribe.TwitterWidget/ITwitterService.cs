@@ -6,6 +6,7 @@ namespace cloudscribe.TwitterWidget
 {
     public interface ITwitterService
     {
-        Task<List<TweetStruct>> RetrieveTweets();
+        string ObtainBearerToken(string key, string secret);
+        Task<List<TweetStruct>> RetrieveTweets(TwitterOptions options, string key);
     }
 }

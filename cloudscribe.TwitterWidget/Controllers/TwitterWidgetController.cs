@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace cloudscribe.TwitterWidget.Controllers
@@ -16,7 +18,7 @@ namespace cloudscribe.TwitterWidget.Controllers
         protected TwitterOptions TwitterOptions { get; private set; }
         protected ILogger Log { get; private set; }
         private MemoryCache _cache;
-        private static readonly string CacheKey = "_TwitterCache";
+        private static readonly string CacheKey = "TwitterCache_";
 
         public TwitterWidgetController(IHostingEnvironment appEnv, ITwitterService twitterService, ILogger<TwitterWidgetController> logger, TwitterCache cache, IOptions<TwitterOptions> options = null)
         {
@@ -35,7 +37,18 @@ namespace cloudscribe.TwitterWidget.Controllers
         [Route("twitter/gettweets")]
         public virtual async Task<IActionResult> RetrieveTweets()
         {
-            return new JsonResult("");
+            var key = CacheKey + TwitterOptions.Username + "_RetrieveTweets";
+            var result = new List<TweetStruct>();
+
+            if (!_cache.TryGetValue(key, out result))
+            {
+                result = await TwitterService.RetrieveTweets(TwitterOptions, key);
+                _cache.Set(key, result, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(TwitterOptions.CacheMinutes));
+            }
+
+            List<TweetStruct> results = _cache.Get<List<TweetStruct>>(key) ?? await TwitterService.RetrieveTweets(TwitterOptions, key);
+
+            return new JsonResult(results);
         }
     }
 }
