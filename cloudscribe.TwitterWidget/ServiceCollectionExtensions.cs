@@ -17,6 +17,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             services.TryAddSingleton<TwitterCache>();
             services.TryAddScoped<ITwitterService, TwitterService>();
+            services.TryAddScoped<ITwitterCacheWrapperService, TwitterCacheWrapperService>();
 
             return services;
         }

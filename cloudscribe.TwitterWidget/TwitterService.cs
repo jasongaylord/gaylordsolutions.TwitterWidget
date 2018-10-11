@@ -14,8 +14,9 @@ namespace cloudscribe.TwitterWidget
 {
     public class TwitterService : ITwitterService
     {
-        public async Task<List<TweetStruct>> RetrieveTweets(TwitterOptions options, string key)
+        public async Task<RetrieveTweetsResult> RetrieveTweetsAsync(TwitterOptions options, string key)
         {
+            var result = new RetrieveTweetsResult();
             var tweetList = new List<TweetStruct>();
 
             if (!string.IsNullOrEmpty(options.Username) && !string.IsNullOrEmpty(options.TwitterConsumerKey) && !string.IsNullOrEmpty(options.TwitterConsumerSecret))
@@ -59,7 +60,11 @@ namespace cloudscribe.TwitterWidget
                 tweetList.AddRange(tweets.Take(options.Count > 0 ? options.Count : 10));
             }
 
-            return tweetList;
+            result.Tweets = tweetList;
+            result.DateTimeExecuted = DateTime.Now;
+            result.IsSuccessful = true;
+
+            return result;
         }
 
         public string ObtainBearerToken(string key, string secret)
