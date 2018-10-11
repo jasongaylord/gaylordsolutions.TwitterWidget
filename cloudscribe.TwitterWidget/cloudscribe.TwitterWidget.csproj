@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>A Twitter widget to be used within CloudScribe</Description>
-    <VersionPrefix>0.2.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>Jason Gaylord</Authors>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <PackageTags>cloudscribe;twitter;tweet;asp.net core</PackageTags>
@@ -14,13 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ITweetRequestProcessor.cs" />
-    <Compile Remove="TweetRequest.cs" />
-    <Compile Remove="TweetRequestParser.cs" />
-    <Compile Remove="TweetRequestProcessor.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="cloudscribe.SimpleContent.Models" Version="4.0.3" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
