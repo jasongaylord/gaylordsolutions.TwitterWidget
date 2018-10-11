@@ -54,7 +54,7 @@ namespace cloudscribe.TwitterWidget
                                  Username = tweet.user.screen_name,
                                  Avatar = tweet.user.profile_image_url,
                                  Timestamp = (DateTime.ParseExact(tweet.created_at, "ddd MMM dd HH:mm:ss %zzzz yyyy", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal)).ToFriendlyDate(),
-                                 Id = tweet.user.id_str
+                                 Id = tweet.id_str
                              };
 
                 tweetList.AddRange(tweets.Take(options.Count > 0 ? options.Count : 10));
