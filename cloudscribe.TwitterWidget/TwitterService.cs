@@ -63,6 +63,7 @@ namespace cloudscribe.TwitterWidget
             result.Tweets = tweetList;
             result.DateTimeExecuted = DateTime.Now;
             result.IsSuccessful = true;
+            result.Settings = options;
 
             return result;
         }

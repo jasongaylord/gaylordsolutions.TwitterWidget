@@ -1,0 +1,77 @@
+﻿@using System.Text.RegularExpressions;
+@model cloudscribe.TwitterWidget.Models.RetrieveTweetsResult
+@{
+    var whiteSpace = new Regex(@"\s+");
+}
+
+<h3>Recent Tweets</h3>
+@if (Model.IsSuccessful)
+{
+    <div class=""><a href="http://www.twitter.com/@Model.Settings.Username" rel="external">Follow @@@Model.Settings.Username on Twitter</a></div><br>
+
+    <ul class="">
+        @foreach (var tweet in Model.Tweets)
+        {
+            string message = tweet.Message;
+            <li>
+                @if (Model.Settings.ShowAvatars)
+                {
+                    <img src="@tweet.Avatar" class="latest-twitter-avatar" height="24" width="24" />
+                }
+
+                @if (Model.Settings.ShowUsername)
+                {
+                    <a href="http://www.twitter.com/@tweet.Username" rel="external">@tweet.Username</a><span>:</span><br />
+                }
+
+                @foreach (string substring in whiteSpace.Split(message))
+                {
+                    if (substring == string.Empty)
+                    {
+                        continue;
+                    }
+
+                    if (Model.Settings.ShowMentionsAsLinks && substring.StartsWith("@"))
+                    {
+                        string username = substring.Replace("@", string.Empty);
+                        <a href="http://www.twitter.com/@username" title="Visit @username on twitter" rel="external">@substring</a>
+                    }
+                    else if (Model.Settings.ShowHashtagsAsLinks && substring.StartsWith("#"))
+                    {
+                        string hashTag = substring.Replace("#", string.Empty);
+                        string searchUrl = "http://twitter.com/#!/search?q=%23" + hashTag;
+                        <a href="@searchUrl" title="Search for mentions of @substring on twitter" rel="external">@substring</a>
+                    }
+                    else if (substring.StartsWith("http://"))
+                    {
+                        <a href="@substring" title="Open link" rel="external">@substring</a>
+                    }
+                    else
+                    {
+                        @substring @(" ");
+                    }
+                }
+
+                @if (Model.Settings.ShowTimestamps)
+                {
+                    <br /><span class="latest-twitter-timestamp">
+                        @if (Model.Settings.ShowTimestampsAsLinks)
+                        {
+                            <a href="http://twitter.com/@tweet.Username/statuses/@tweet.Id">@(tweet.Timestamp)</a>
+                        }
+                        else
+                        {
+                            @(tweet.Timestamp)
+                        }
+                    </span>
+                }
+            </li>
+        }
+    </ul>
+
+    <div>Last retrieved at: @Model.DateTimeExecuted.ToString()</div>
+}
+else
+{
+    <div>An error has occurred while retrieving tweets.</div>
+}

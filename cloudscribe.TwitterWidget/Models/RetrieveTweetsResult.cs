@@ -9,5 +9,6 @@ namespace cloudscribe.TwitterWidget.Models
         public bool IsSuccessful { get; set; } = false;
         public Exception Exception { get; set; } = new Exception();
         public DateTime DateTimeExecuted { get; set; } = new DateTime();
+        public TwitterOptions Settings { get; set; } = new TwitterOptions();
     }
 }
