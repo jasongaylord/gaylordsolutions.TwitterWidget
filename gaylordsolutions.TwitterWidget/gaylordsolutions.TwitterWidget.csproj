@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <Description>A Twitter widget to be used within CloudScribe</Description>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.1.0</VersionPrefix>
     <Authors>Jason Gaylord</Authors>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <PackageTags>cloudscribe;twitter;tweet;asp.net core</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/joeaudette/cloudscribe/master/cloudscribe-icon-32.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/jasongaylord/cloudscribe.TwitterWidget</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jasongaylord/gaylordsolutions.TwitterWidget</PackageProjectUrl>
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/jasongaylord/cloudscribe.TwitterWidget.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/jasongaylord/gaylordsolutions.TwitterWidget.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   

@@ -1,4 +1,4 @@
-# cloudscribe.TwitterWidget
+# gaylordsolutions.TwitterWidget
 A TwitterWidget for the @cloudscribe project
 
 The documentation for the TwitterWidget is lacking. However, the first version can be used in your cloudscribe project. As of the time of this writing, there are a few items to manually change in your cloudscribe project:

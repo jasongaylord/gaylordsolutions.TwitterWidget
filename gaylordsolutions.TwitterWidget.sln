@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cloudscribe.TwitterWidget", "cloudscribe.TwitterWidget\cloudscribe.TwitterWidget.csproj", "{4E6D0D24-3009-43C1-875E-72511C673D4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gaylordsolutions.TwitterWidget", "gaylordsolutions.TwitterWidget\gaylordsolutions.TwitterWidget.csproj", "{4E6D0D24-3009-43C1-875E-72511C673D4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
