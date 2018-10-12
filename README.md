@@ -1,12 +1,10 @@
 # gaylordsolutions.TwitterWidget
 A TwitterWidget for the @cloudscribe project
 
-The documentation for the TwitterWidget is lacking. However, the first version can be used in your cloudscribe project. As of the time of this writing, there are a few items to manually change in your cloudscribe project:
+The documentation for the TwitterWidget is lacking. However, the first version can be used in your cloudscribe project. As of the time of this writing, there are two items to manually change in your cloudscribe project:
 
-1. Until I publish the NuGet package, you must manually add the binary as a dependency.
-2. In the cloudscribe project's config folder, find the cloudscribeFeatures.cs file. Modify the SetupCloudscribeFeatures function by including the following line: `services.AddTwitterWidget(config.GetSection("TwitterOptions"));` right above the return.
-3. In the cloudscribe project's config folder, find the RoutingAndMVC.cs file. Just below the `services.AddMVC()` line and right above the `.AddRazorOptions...` line, add `.AddApplicationPart(typeof(cloudscribe.TwitterWidget.Controllers.TwitterWidgetController).GetTypeInfo().Assembly)`
-4. In appsettings, add new configuration at the bottom of the file that resembles the below:
+1. In the cloudscribe project's config folder, find the cloudscribeFeatures.cs file. Modify the SetupCloudscribeFeatures function by including the following line: `services.AddTwitterWidget(config.GetSection("TwitterOptions"));` right above the return.
+2. In appsettings, add new configuration at the bottom of the file that resembles the below:
 `  "TwitterOptions": {
     "Username": "",
     "TwitterConsumerKey": "",
