@@ -1,6 +1,6 @@
-﻿using cloudscribe.TwitterWidget;
-using cloudscribe.TwitterWidget.Models;
-using cloudscribe.TwitterWidget.Services;
+﻿using gaylordsolutions.TwitterWidget;
+using gaylordsolutions.TwitterWidget.Models;
+using gaylordsolutions.TwitterWidget.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

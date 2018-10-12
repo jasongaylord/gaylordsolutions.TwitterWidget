@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
-using cloudscribe.TwitterWidget.Models;
-using cloudscribe.TwitterWidget.Services;
+using gaylordsolutions.TwitterWidget.Models;
+using gaylordsolutions.TwitterWidget.Services;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace cloudscribe.TwitterWidget
+namespace gaylordsolutions.TwitterWidget
 {
     public class TwitterCacheWrapperService : ITwitterCacheWrapperService
     {

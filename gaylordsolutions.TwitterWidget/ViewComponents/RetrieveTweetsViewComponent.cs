@@ -1,11 +1,11 @@
-﻿using cloudscribe.TwitterWidget.Models;
-using cloudscribe.TwitterWidget.Services;
+﻿using gaylordsolutions.TwitterWidget.Models;
+using gaylordsolutions.TwitterWidget.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
 
-namespace cloudscribe.TwitterWidget.ViewComponents
+namespace gaylordsolutions.TwitterWidget.ViewComponents
 {
     public class RetrieveTweetsViewComponent : ViewComponent
     {

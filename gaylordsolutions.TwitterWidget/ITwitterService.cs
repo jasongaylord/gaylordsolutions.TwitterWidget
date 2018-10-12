@@ -1,7 +1,7 @@
-﻿using cloudscribe.TwitterWidget.Models;
+﻿using gaylordsolutions.TwitterWidget.Models;
 using System.Threading.Tasks;
 
-namespace cloudscribe.TwitterWidget
+namespace gaylordsolutions.TwitterWidget
 {
     public interface ITwitterService
     {

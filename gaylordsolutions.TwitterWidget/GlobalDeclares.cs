@@ -1,4 +1,4 @@
-﻿namespace cloudscribe.TwitterWidget
+﻿namespace gaylordsolutions.TwitterWidget
 {
     public static class Globals
     {

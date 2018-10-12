@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace cloudscribe.TwitterWidget.Extensions
+namespace gaylordsolutions.TwitterWidget.Extensions
 {
     public static class DateTimeExtensions
     {

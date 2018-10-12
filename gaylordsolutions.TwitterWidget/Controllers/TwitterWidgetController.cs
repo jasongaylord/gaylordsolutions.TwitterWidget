@@ -1,11 +1,11 @@
-﻿using cloudscribe.TwitterWidget.Models;
-using cloudscribe.TwitterWidget.Services;
+﻿using gaylordsolutions.TwitterWidget.Models;
+using gaylordsolutions.TwitterWidget.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
 
-namespace cloudscribe.TwitterWidget.Controllers
+namespace gaylordsolutions.TwitterWidget.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
     public class TwitterWidgetController : Controller

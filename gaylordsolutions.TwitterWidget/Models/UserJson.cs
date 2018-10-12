@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace cloudscribe.TwitterWidget.Models
+namespace gaylordsolutions.TwitterWidget.Models
 {
     public class UserJson
     {

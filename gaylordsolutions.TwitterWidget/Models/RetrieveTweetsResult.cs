@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cloudscribe.TwitterWidget.Models
+namespace gaylordsolutions.TwitterWidget.Models
 {
     public class RetrieveTweetsResult
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 
-namespace cloudscribe.TwitterWidget.Services
+namespace gaylordsolutions.TwitterWidget.Services
 {
     public class TwitterCache
     {

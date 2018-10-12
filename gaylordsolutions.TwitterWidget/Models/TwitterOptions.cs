@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace cloudscribe.TwitterWidget.Models
+namespace gaylordsolutions.TwitterWidget.Models
 {
     public class TwitterOptions
     {

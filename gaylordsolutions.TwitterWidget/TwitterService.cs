@@ -6,11 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using cloudscribe.TwitterWidget.Extensions;
-using cloudscribe.TwitterWidget.Models;
+using gaylordsolutions.TwitterWidget.Extensions;
+using gaylordsolutions.TwitterWidget.Models;
 using Newtonsoft.Json;
 
-namespace cloudscribe.TwitterWidget
+namespace gaylordsolutions.TwitterWidget
 {
     public class TwitterService : ITwitterService
     {
