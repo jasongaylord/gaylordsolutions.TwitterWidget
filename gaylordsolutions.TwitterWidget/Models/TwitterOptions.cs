@@ -5,11 +5,11 @@ namespace gaylordsolutions.TwitterWidget.Models
     public class TwitterOptions
     {
         [Required]
-        public string Username { get; set; } = "cloudscribeweb";
+        public string Username { get; set; } = "jgaylord";
         public int Count { get; set; } = 5;
         public int CacheMinutes { get; set; } = 5;
         public bool ShowAvatars { get; set; } = false;
-        public bool ShowUsername { get; set; } = true;
+        public bool ShowUsername { get; set; } = false;
         public bool ShowTimestamps { get; set; } = true;
         public bool ShowMentionsAsLinks { get; set; } = true;
         public bool ShowHashtagsAsLinks { get; set; } = true;
