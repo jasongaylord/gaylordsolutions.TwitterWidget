@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gaylordsolutions.TwitterWidget", "gaylordsolutions.TwitterWidget\gaylordsolutions.TwitterWidget.csproj", "{4E6D0D24-3009-43C1-875E-72511C673D4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWeb", "SampleWeb\SampleWeb.csproj", "{5487C404-7571-4129-BD28-A42AD4553801}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4E6D0D24-3009-43C1-875E-72511C673D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E6D0D24-3009-43C1-875E-72511C673D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E6D0D24-3009-43C1-875E-72511C673D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5487C404-7571-4129-BD28-A42AD4553801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5487C404-7571-4129-BD28-A42AD4553801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5487C404-7571-4129-BD28-A42AD4553801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5487C404-7571-4129-BD28-A42AD4553801}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+﻿@page
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title>Index</title>
+</head>
+<body>
+    <h3>Tweets</h3>
+    @await Component.InvokeAsync("RetrieveTweets", new { })
+</body>
+</html>
